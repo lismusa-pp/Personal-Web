@@ -1,34 +1,125 @@
-/* Koment: Rregullime themelore */
-body {
-    font-family: Arial, sans-serif;
+/* Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background image */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: url('../images/mountain.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #1e293b;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    position: relative;
+  }
+  
+  /* Optional dark overlay for contrast */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+  }
+  
+  /* Links */
+  a {
+    color: #0ea5e9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
   }
   
   /* Header */
   header {
-    background: #005f73;
+    background: rgba(30, 58, 138, 0.9);
     color: white;
-    padding: 2rem;
     text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 12px 12px;
   }
   
-  /* Seksione */
+  header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #dbeafe;
+  }
+  
+  /* Section cards */
   section {
+    background-color: rgba(255, 255, 255, 0.92);
+    max-width: 900px;
+    margin: 2rem auto;
     padding: 2rem;
-    background: white;
-    margin: 1rem;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  section:hover {
+    transform: scale(1.01);
+  }
+  
+  /* Section headings */
+  section h2 {
+    color: #1e3a8a;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-left: 6px solid #0ea5e9;
+    padding-left: 0.5rem;
+  }
+  
+  /* Skills list */
+  #skills ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  #skills li {
+    background: #e0f2fe;
+    color: #0369a1;
+    display: inline-block;
+    margin: 0.3rem 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
   }
   
   /* Footer */
   footer {
+    background-color: rgba(30, 41, 59, 0.95);
+    color: #cbd5e1;
     text-align: center;
-    padding: 1rem;
-    background: #333;
-    color: white;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    section {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
   }
   
