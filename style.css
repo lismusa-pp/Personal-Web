@@ -121,6 +121,38 @@
     list-style: none;
     padding-left: 0;
   }
+  section#about, section#certifications {
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 12px;
+    max-width: 900px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  section#about p,
+  section#certifications ul {
+    color: #1e293b;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  section#certifications ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  section#certifications li {
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  
+  section#certifications li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+  }
   
   #skills li {
     background: #e0f2fe;
