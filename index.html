@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Lis Musa - Web Developer Portfolio. Check out my technical skills, projects, and contact information.">
+  <meta name="keywords" content="web developer, Lis Musa, portfolio, Python, JavaScript, front-end, back-end">
   <title>Portfoli Personal</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
 
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle">Dark Mode</button>
+
   <!-- Seksioni i Header-it -->
   <header>
+    <img src="images/profile.jpg" alt="Lis Musa" class="profile-img" />
     <h1>Lis Musa</h1>
-    <p>Programues Web | Front-end Enthusiast and Back-end</p>
+    <p>Programues Web | Front-end and Back-end Enthusiast </p>
   </header>
 
   <!-- Seksioni Biografisë -->
@@ -35,17 +43,48 @@
     </ul>
   </section>
 
+<!-- Seksioni i Projekteve -->
+<section id="projects">
+    <h2>Projekte</h2>
+  
+    <!-- Projekt 1 -->
+    <div class="project">
+      <h3>Projekt 1</h3>
+      <p>Ky është një portfolio personal që pasqyron aftësitë dhe përvojën time në zhvillimin web dhe teknologji, duke përdorur HTML5, CSS3 dhe JavaScript për të krijuar një faqe dinamike dhe moderne me dizajn përgjegjës.</p>
+      <a href="https://github.com/lismusa-pp/Personal-Web" target="_blank" class="github-link">Shiko Projektin në GitHub</a>
+    </div>
+  
+    <!-- Projekt 2  -->
+    <div class="project">
+      <h3>Projekt 2</h3>
+      <p>Ky projekt është një Web Scraper i ndërtuar me gjuhën programuese Python, i cili mbledh automatikisht të dhëna nga faqe të internetit. Përdor biblioteka si requests, BeautifulSoup dhe pandas për të analizuar dhe ruajtur informacionin në mënyrë efikase. Ky mjet është i dobishëm për kërkime, analiza të të dhënave dhe automatizim informacionesh nga webi.</p>
+      <a href="https://github.com/lismusa-pp/web_scraper" target="_blank" class="github-link">Shiko Projektin në GitHub</a>
+    </div>
+  
+    <!-- More projects can be added here -->
+  </section>
+  
   <!-- Seksioni i Kontaktit -->
   <section id="contact">
     <h2>Kontakti</h2>
-    <p>Email: <a href="mailto:l1smusaaa14@gmail.com">l1smusaaa14@gmail.com</a></p>
+    <form action="submit_form.php" method="POST">
+      <input type="text" name="name" placeholder="Emri juaj" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Mesazhi juaj" required></textarea>
+      <button type="submit">Dërgo Mesazhin</button>
+    </form>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Lis Musa. Të gjitha të drejtat e rezervuara.</p>
+    <div class="social-links">
+      <a href="https://github.com/lismusa-pp" target="_blank" class="social-btn github-btn"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="social-btn linkedin-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://twitter.com/yourhandle" target="_blank" class="social-btn twitter-btn"><i class="fab fa-twitter"></i> Twitter</a>
+    </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -13,6 +13,7 @@
     color: #1e293b;
     line-height: 1.6;
     position: relative;
+    transition: background-color 0.3s ease;
   }
   
   /* Optional dark overlay for contrast */
@@ -24,6 +25,33 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     z-index: -1;
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #1e293b;
+    color: white;
+  }
+  
+  /* Dark Mode specific styles */
+  body.dark-mode header {
+    background-color: rgba(30, 41, 59, 0.95);
+  }
+  
+  body.dark-mode footer {
+    background-color: rgba(30, 41, 59, 0.95);
+  }
+  
+  /* Dark mode button */
+  #darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: #0ea5e9;
+    color: white;
+    border: none;
+    cursor: pointer;
   }
   
   /* Links */
@@ -54,6 +82,14 @@
   header p {
     font-size: 1.2rem;
     color: #dbeafe;
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
   }
   
   /* Section cards */
@@ -96,16 +132,145 @@
     font-weight: 500;
   }
   
+/* Projekti Section */
+#projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+    gap: 3rem; /* More space between cards */
+    margin: 4rem auto; /* More top & bottom space */
+    padding: 0 3rem; /* More left & right padding */
+    max-width: 1200px; /* Prevent stretching too far */
+  }
+  
+  /* Individual Project Cards */
+  .project {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Project Titles */
+  .project h3 {
+    font-size: 1.8rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+  }
+  
+  /* Project Descriptions */
+  .project p {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  /* GitHub Link Button */
+  .project a.github-link {
+    color: #fff;
+    background: #0ea5e9;
+    padding: 0.8rem 1.6rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project a.github-link:hover {
+    background-color: #0284c7;
+  }
+  
+  /* Responsive Grid Adjustments */
+  @media (max-width: 1024px) {
+    #projects {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 2rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #projects {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
+  }
+  
+  
   /* Footer */
   footer {
     background-color: rgba(30, 41, 59, 0.95);
     color: #cbd5e1;
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 1rem;
     margin-top: 3rem;
     font-size: 0.9rem;
     border-radius: 12px 12px 0 0;
   }
+  
+  .social-links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .social-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .social-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .social-btn:hover::before {
+    opacity: 1;
+  }
+  
+  .github-btn {
+    background: linear-gradient(135deg, #24292e, #6e5494);
+  }
+  
+  .linkedin-btn {
+    background: linear-gradient(135deg, #0077b5, #005582);
+  }
+  
+  .twitter-btn {
+    background: linear-gradient(135deg, #1da1f2, #1991d1);
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  
   
   /* Responsive */
   @media (max-width: 768px) {
@@ -120,6 +285,10 @@
   
     section h2 {
       font-size: 1.5rem;
+    }
+  
+    .project {
+      width: 100%;
     }
   }
   
