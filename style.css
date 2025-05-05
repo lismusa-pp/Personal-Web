@@ -11,7 +11,7 @@
     background: url('images/mountain.jpg') no-repeat center center fixed;
 
     background-size: cover;
-    color: #1e293b;
+    color: #35195a;
     line-height: 1.6;
     position: relative;
     transition: background-color 0.3s ease;
@@ -67,7 +67,7 @@
   
   /* Header */
   header {
-    background: rgba(30, 58, 138, 0.9);
+    background: rgba(104, 53, 11, 0.9);
     color: white;
     text-align: center;
     padding: 3rem 1rem;
