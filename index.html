@@ -12,6 +12,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#bio">Biografia</a></li>
+      <li><a href="#about">Rreth Meje</a></li>
+      <li><a href="#certifications">Certifikatat</a></li>
+      <li><a href="#skills">Aftësitë</a></li>
+      <li><a href="#projects">Projektet</a></li>
+      <li><a href="#contact">Kontakti</a></li>
+    </ul>
+  </nav>
   <!-- Dark Mode Toggle -->
   <button id="darkModeToggle">Dark Mode</button>
 
@@ -53,15 +63,16 @@
 
   <!-- Seksioni i Aftësive Teknike -->
   <section id="skills">
-    <h2>Aftësitë Teknike</h2>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3 (Flexbox, Grid)</li>
-      <li>JavaScript</li>
-      <li>jQuery</li>
-      <li>Python</li>
-    </ul>
+    <h2>Këto janë aftësitë e mia:</h2>
+    <div class="skills-container">
+      <div class="skill"><i class="fab fa-html5"></i><span>HTML5</span></div>
+      <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+      <div class="skill"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+      <div class="skill"><i class="fas fa-code"></i><span>jQuery</span></div>
+      <div class="skill"><i class="fab fa-python"></i><span>Python</span></div>
+    </div>
   </section>
+  
 
 <!-- Seksioni i Projekteve -->
 <section id="projects">

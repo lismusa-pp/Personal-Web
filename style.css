@@ -155,15 +155,55 @@
     left: 0;
   }
   
-  #skills li {
-    background: #e0f2fe;
-    color: #0369a1;
-    display: inline-block;
-    margin: 0.3rem 0.4rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-weight: 500;
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
   }
+  
+  .skill {
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+  }
+  
+  .skill:hover {
+    transform: scale(1.05);
+  }
+  
+  .skill i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #0ea5e9;
+  }
+  
+  .skill span {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  #skills {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #f8fafc;
+  }
+  
+  #skills h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0f172a;
+  }
+    
   
 /* Projekti Section */
 #projects {
@@ -401,6 +441,51 @@
   
     .project {
       width: 100%;
+    }
+  }
+
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(30, 41, 59, 0.95);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .navbar a {
+    color: #f0f9ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #38bdf8;
+  }
+
+  section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+  }
+  
+  section:nth-child(even) {
+    animation-delay: 0.3s;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
   
