@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
-
   <!-- Dark Mode Toggle -->
   <button id="darkModeToggle">Dark Mode</button>
 
@@ -21,6 +20,7 @@
     <img src="images/profile.jpg" alt="Lis Musa" class="profile-img" />
     <h1>Lis Musa</h1>
     <p>Programues Web | Front-end and Back-end Enthusiast </p>
+    <a href="Lis_Musa_CV.pdf" class="cv-btn" download>📄 Shkarko CV</a>
   </header>
 
   <!-- Seksioni Biografisë -->
@@ -80,20 +80,25 @@
       <p>Ky projekt është një Web Scraper i ndërtuar me gjuhën programuese Python, i cili mbledh automatikisht të dhëna nga faqe të internetit. Përdor biblioteka si requests, BeautifulSoup dhe pandas për të analizuar dhe ruajtur informacionin në mënyrë efikase. Ky mjet është i dobishëm për kërkime, analiza të të dhënave dhe automatizim informacionesh nga webi.</p>
       <a href="https://github.com/lismusa-pp/web_scraper" target="_blank" class="github-link">Shiko Projektin në GitHub</a>
     </div>
-  
-    <!-- More projects can be added here -->
   </section>
   
   <!-- Seksioni i Kontaktit -->
   <section id="contact">
     <h2>Kontakti</h2>
     <form action="submit_form.php" method="POST">
-      <input type="text" name="name" placeholder="Emri juaj" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" placeholder="Mesazhi juaj" required></textarea>
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Emri juaj" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Mesazhi juaj" required></textarea>
+      </div>
       <button type="submit">Dërgo Mesazhin</button>
     </form>
   </section>
+  
 
   <!-- Footer -->
   <footer>
