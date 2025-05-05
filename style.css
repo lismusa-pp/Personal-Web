@@ -9,6 +9,7 @@
   body {
     font-family: 'Poppins', sans-serif;
     background: url('images/mountain.jpg') no-repeat center center fixed;
+
     background-size: cover;
     color: #1e293b;
     line-height: 1.6;
